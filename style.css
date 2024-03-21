@@ -1,0 +1,464 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+/* Nav bar */
+
+.nav-bar{
+    width: 100%;
+    background-color: rgba(8, 8, 8, 0.813);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+}
+
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    
+}
+
+.list-item{
+    display: inline-block;
+    list-style: none; /* removed dotted symbols */
+    margin: 0px 10px;  /* to give space between list items */
+
+}
+
+.book{
+    background-color: orange;
+    margin-left: 60px;
+}
+
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: orange;
+}
+
+.book-table:hover{
+    color: black;
+    font-weight: bold;
+}
+
+.logo{
+    width: 100px;
+}
+
+
+
+
+
+
+/* home section */
+#HOME{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./Media/vegetables-set-left-black-slate_1220-685.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.welcome-content{
+    width: 100%;
+    position: relative;
+    
+}
+
+
+.pastha-anim{
+
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute; 
+}
+
+.img-rotate{
+   
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 60px;
+    
+    animation: rotate 28s infinite;
+}
+
+@keyframes rotate{
+    100% { transform: rotate(360deg);}    
+}
+
+.Welcome-txt{
+    
+    /* border: 1px solid white; */
+    border-radius: 8px;
+    color: white;
+    width: 400px;
+    padding: 20px;
+
+    margin-top: 230px;
+    margin-left: 460px;
+    text-align: justify;
+    /* font-size: 10px; */
+    position: absolute;
+    opacity: 0;/* to give fade in animation effect */
+    animation: fadeIn 3s ease-in forwards;
+
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.btn-div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+}
+
+.btn:hover{
+    background-color: greenyellow;
+    border-radius: 20px;
+    font-weight: bold;
+}
+  
+.btn{
+    border-radius: 10px;
+    padding : 5px 15px;
+    list-style: none;
+    background-color: orange;
+    color: rgb(7, 3, 3);
+    text-decoration: none;
+}
+
+
+
+
+/* About Section */
+
+.about-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./Media/coffee-beans-dark-background-top-view-coffee-concept_1220-6299.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.content{
+    color: white;
+    /* border: 1px solid white; */
+    margin: 140px 20px 20px 20px
+}
+
+.cont1{
+    width: 70%;
+}
+
+.cont2{
+
+    width: 30%;
+}
+
+.about-us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.about-us-content{
+    padding: 50px;
+    text-indent: 80px;
+    text-align: justify;
+    
+}
+
+.read-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.design-font{
+   /*  font-family: "Mea Culpa", cursive; */
+    /* font-family: "Fleur De Leah", cursive; */
+    font-family: "Condiment", cursive;
+    color: orange;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery Section */
+
+.gallery-container{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.911);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+
+
+}
+
+.gallery-txt{
+    margin-top: 100px;
+    padding: 50px;
+}
+
+
+.img1{
+    grid-column: span 3; /* to increse cloumns size- Each item spans 3 columns */
+    
+    background-color: rgba(0, 0, 0, 0.911);
+    color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.Gimages img:hover{
+    animation: zoom 1s ease-in;
+}
+
+@keyframes zoom{
+    100%{transform: scale(1.1);}
+}
+
+
+
+
+
+
+
+
+
+
+/* Menu Section */
+    #MENU{
+    width: 100%;
+    background-image: url(https://img.freepik.com/premium-photo/italian-food-composition-with-big-space-middle_23-2147686550.jpg?w=1060);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+}
+
+
+.menu-txt{
+    
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+
+}
+
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 50px;
+    justify-content: center;
+    color: white;
+    padding: 30px;
+}
+
+.menu-catagory{
+    margin: px;
+    
+    background-color: rgba(0, 0, 0, 0.607);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+/* Contact Section */
+
+#CONTACT{
+    background-color: black;
+    color: white;
+}
+
+.contactus-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 10px;
+}
+
+.add-locat-container{
+    display: flex;
+    background-image: url(https://img.freepik.com/free-photo/restaurant-open-space-new-concept_140725-7437.jpg?t=st=1710934821~exp=1710938421~hmac=373ac68b085d6e524832eb8e0982ea7e7331cfb08a7e3c78715183a744ec4567&w=900);
+}
+
+.add-detail{
+    width: 40%;
+    padding-left: 70px;
+    padding-top: 80px;
+}
+
+.line-item{
+    margin: 20px;
+}
+
+.location{
+    width: 60%;
+    padding: 8px;
+}
+
+
+/* Book A Table Section */
+#BOOK-TABLE{ 
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-photo/abstract-blurred-people-night-festival-city-park-bokeh-background-vintage-tone_1258-79070.jpg?t=st=1710938315~exp=1710941915~hmac=ee864e8e4d7e8986baf0061da35b3daf0cce02cd3535b63bc1a0fd98366c02a6&w=1060);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-container{
+    width: 80%;
+    height: 70%;
+    margin-top: 120px;
+    background-color: white;
+    
+    display: flex;
+}
+
+.table-pic{
+    width: 50%;
+    padding: 20px;
+
+}
+
+.book-txt{
+    margin: 10px;
+}
+
+.book-form{
+    width: 50%;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 70%;
+    height: 80%;
+    padding: 20px;
+}
+
+
+.h1{
+    color: black;
+}
+
+
+.details{
+    width: 100%;
+    padding: 2px;
+    margin: 2px;
+}
+
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* footer section */
+
+footer{
+    width: 100%;
+    color: orange;
+    background-color: black;
+}
+
+.follow{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.f-icon{
+    margin: 20px;
+    padding-top: 10px;
+}
+
+.Copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
